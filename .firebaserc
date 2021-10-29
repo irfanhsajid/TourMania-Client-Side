@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "default": "tourmania-react-node-mongo"
+  }
+}
