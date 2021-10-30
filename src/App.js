@@ -9,7 +9,7 @@ import Home from './components/pages/home/Home';
 import NavBar from './components/pages/shared/header/NavBar';
 import Error from './components/pages/error/Error';
 import Login from './components/pages/login/Login';
-import Blogs from './components/pages/blogs/Blogs';
+import Booking from './components/pages/booking/Booking';
 import Packages from './components/pages/packages/Packages';
 import Orders from './components/pages/orders/Orders';
 import Register from './components/pages/register/Register';
@@ -29,12 +29,12 @@ function App() {
             <Route exact path='/home'>
               <Home></Home>
             </Route>
-            <Privateroute exact path='/packages'>
+            <Route exact path='/packages'>
               <Packages></Packages>
-            </Privateroute>
-            <Route exact path='/blogs'>
-              <Blogs></Blogs>
             </Route>
+            <Privateroute exact path='/booking'>
+              <Booking></Booking>
+            </Privateroute>
             <Route exact path='/orders'>
               <Orders></Orders>
             </Route>

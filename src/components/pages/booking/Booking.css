@@ -1,0 +1,22 @@
+.submit-form{
+     background-color:#63b9ffd5;
+   
+}
+.submit-form form{
+    width: 80%;
+}
+.submit-form input{
+    border-radius: 5px;
+    
+}
+
+.confirm-btn{
+    width: auto;
+}
+
+@media screen  and (max-width:600px) {
+    .submit-form form{
+        width: 100%;
+    }
+}
+

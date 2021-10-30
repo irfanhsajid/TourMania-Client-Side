@@ -1,0 +1,35 @@
+.title-bold-text{
+    font-size: 50px;
+    font-weight: bolder;
+    color: #000000;
+}
+
+.card-container{
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px 5px whitesmoke;
+    overflow: hidden;
+    mix-blend-mode: multiply;
+}
+.card-container:hover{
+    border: 1.5px solid #c4890bf8;
+    transition: all .5s ease-in-out;
+    box-shadow: 2px 2px 10px  #615e5e;
+}
+.card-img{
+    height: 280px;
+    object-fit: cover;
+}
+.card-img:hover{
+    transform: scale(1.05);
+    transition: all .5s ease-in-out;
+}
+
+  .enroll-btn:hover{
+    background-color: black;
+    color: white;
+    transition: all .3s ease-in;
+  }
+  .card-text{
+      color: #141622;
+  }

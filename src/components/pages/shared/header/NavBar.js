@@ -8,28 +8,28 @@ const NavBar = () => {
     const { user, logOut } = useAuth()
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand className="nav-logo fw-bold text-primary" href="#home">TourMania</Navbar.Brand>
+                    <Navbar.Brand className="nav-logo fw-bold text-success" href="#home">Tour<span className="text-danger">Mania</span> </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
-                        <Nav.Link as={Link} to='/home'>Home</Nav.Link>
-                        <Nav.Link as={Link} to='/packages'>Packages</Nav.Link>
-                        <Nav.Link as={Link} to='/blogs'>Blogs</Nav.Link>
+                        <Nav.Link className="link-title" as={Link} to='/home'>Home</Nav.Link>
+                        <Nav.Link className="link-title" as={Link} to='/packages'>Packages</Nav.Link>
+
                         {
-                            user.email ? <Nav.Link as={Link} to='/orders'>My Orders</Nav.Link> :
+                            user.email ? <Nav.Link className="link-title" as={Link} to='/orders'>My Orders</Nav.Link> :
                                 " "
                         }
 
 
                         {
                             user?.email ?
-                                <Button onClick={logOut} className="px-2 py-0 mx-2" variant="light"> Log Out </Button> :
-                                <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+                                <Button onClick={logOut} className="px-2 py-0 mx-2" variant="danger">Log Out </Button> :
+                                <Nav.Link className="link-title" as={Link} to='/login'>Login</Nav.Link>
 
                         }
-                        <Navbar.Text>
-                            Signed in as: <a href="#login">{user.displayName}</a>
+                        <Navbar.Text className="text-dark">
+                            <i class="fas fa-user-alt"></i> <a className="text-black" href="#login">{user.displayName}</a>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
