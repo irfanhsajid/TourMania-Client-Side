@@ -1,0 +1,14 @@
+.banner-img{
+    height: 550px;
+   object-fit: cover;
+   transition: all .7s;
+}
+.banner-img:hover{
+    transform: scale(1.15);
+}
+
+@media screen and (max-width:700px) {
+    .banner-img{
+        height: 400px;
+    }
+}

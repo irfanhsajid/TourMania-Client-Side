@@ -6,7 +6,7 @@ import './packages.css';
 const Packages = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch('https://damp-cove-38892.herokuapp.com/packages')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
@@ -19,28 +19,31 @@ const Packages = () => {
             </div>
             <small className="text-muted">All the places are amazing.! We Provide the best quality of Tour Trip. Definitely, <br /> You will be pleased with our services. Just Drop a call for any package Booking. <br /> Feel Free to have a trip with TourMania group.<br />
             </small>
-            <div className="row">
+            <div className="row g-4 mt-2">
                 {
                     services.map(service =>
-                        <div className="col-12 col-md-4 g-4">
-                            <div className="card h-100 card-container">
+                        <div className="col-12 col-md-4  ">
+                            <Link to="/booking" className="text-decoration-none">
+                                <div className="card h-100 card-container shadow-lg">
 
-                                <img src={service.img} alt="services img" className="card-img img-fluid" />
+                                    <div className="img-container">
+                                        <img src={service.img} alt="services img" className="card-img img-fluid" />
+                                    </div>
 
-                                <div className="card-body">
-                                    <h3 className="card-title fw-bold">{service.name}</h3>
-                                    <span className="card-text">
+                                    <div className="card-body">
+                                        <h3 className="card-title fw-bold text-dark">{service.name}</h3>
+                                        <div className="card-text">
+                                            <p><i class="far fa-clock"></i> {service.days} Days &nbsp; &nbsp; <i class="fas fa-user"></i> {service.person}+</p>
+                                            <b className="text-dark">Total Cost : {service.cost}$</b>  &nbsp; &nbsp;
+                                            <b> <i class="fas fa-map-marker-alt"></i> {service.location}</b>
+                                        </div>
 
-                                        <p><i class="far fa-clock"></i> {service.days} Days</p>
-                                        <p>Total Cost : {service.cost}$</p>
-                                        <b> <i class="fas fa-map-marker-alt"></i> {service.location}</b>
-                                    </span>
-                                    <br />
-                                    <Link to='/booking' className="text-decoration-none">
-                                        <button className="border-0 d-flex mx-auto  btn-dark text-warning rounded-2 px-3 py-1 enroll-btn">Book Package</button>
-                                    </Link>
+                                        {/* <Link to='/booking' className="text-decoration-none">
+                                            <button className="border-0 d-flex mx-auto  btn-dark text-warning rounded-2 px-3 py-1 enroll-btn">Book Package</button>
+                                        </Link> */}
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     )
                 }

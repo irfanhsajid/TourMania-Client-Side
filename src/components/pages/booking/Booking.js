@@ -6,7 +6,7 @@ import "./Booking.css";
 const Booking = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch(`http://localhost:5000/addOrder`, {
+        fetch(`https://damp-cove-38892.herokuapp.com/addOrder`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data),
@@ -14,6 +14,7 @@ const Booking = () => {
             .then(res => res.json())
             .then(result => console.log(result))
         console.log(data);
+        alert('Your Order is Successfully Done');
         reset();
     };
 

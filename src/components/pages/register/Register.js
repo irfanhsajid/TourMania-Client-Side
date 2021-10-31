@@ -17,7 +17,7 @@ const Register = () => {
                     <br />
                     <input className="border-0" type="password" name="" id="" placeholder="Re-Enter Password" />
                     <br />
-                    <input className="submit" type="submit" value="Submit" />
+                    <input className="submit d-flex m-auto btn rounded-2 w-auto text-center px-4 py-1 " type="submit" value="Submit" />
                 </form>
                 <p>Already Have an acount? <Link to="/login">Login</Link></p>
             </div>

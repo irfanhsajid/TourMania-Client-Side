@@ -5,14 +5,14 @@ const Orders = () => {
     const [orders, setOrders] = useState([]);
     const [isDeleted, setIsDeleted] = useState(null);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://damp-cove-38892.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [isDeleted]);
     //delete method 
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://damp-cove-38892.herokuapp.com/deleteOrder/${id}`, {
             method: "DELETE",
             headers: { "content-type": "application/json" }
         })
@@ -26,7 +26,7 @@ const Orders = () => {
                     setIsDeleted(false)
                 }
             });
-        console.log(id);
+        alert('Are You sure to DELETE?');
     };
     return (
         <div className='container my-4'>
