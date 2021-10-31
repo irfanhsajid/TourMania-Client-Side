@@ -4,7 +4,7 @@ import './Faq.css';
 import image from './faq.png'
 const Faq = () => {
     return (
-        <div className="container-fluid my-5">
+        <div className="container-fluid my-5 faq">
             <h2 className="text-center fw-bold">Frequently Asked Questions On COVID-19</h2>
             <p className="w-75 my-3 d-flex mx-auto border-3 border-bottom"></p>
             <div className="faq-container">

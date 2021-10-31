@@ -11,16 +11,18 @@ const Packages = () => {
             .then(data => setServices(data))
     }, []);
     return (
-        <div className=" container my-5">
+        <div className=" container-fluid my-5">
 
-            <div className="border-start border-4 border-dark my-4">
-                <h2 className=" ms-3 abt-title">Trending, <span className="title-bold-text">Best Selling <br />
-                    Tours And</span> Fun <br /> Destinations</h2>
+            <div className="container">
+                <div className="border-start border-4 border-dark my-4">
+                    <h2 className=" ms-3 abt-title">Trending, <span className="title-bold-text">Best Selling <br />
+                        Tours And</span> Fun <br /> Destinations</h2>
 
+                </div>
+                <small className="text-muted">All the places are amazing.! We Provide the best quality of Tour Trip. Definitely, <br /> You will be pleased with our services. Just Drop a call for any package Booking. <br /> Feel Free to have a trip with TourMania group.<br />
+                </small>
             </div>
-            <small className="text-muted">All the places are amazing.! We Provide the best quality of Tour Trip. Definitely, <br /> You will be pleased with our services. Just Drop a call for any package Booking. <br /> Feel Free to have a trip with TourMania group.<br />
-            </small>
-            <div className="row g-4 mt-2">
+            <div className="row g-3 mt-2">
                 {
                     services.map(service =>
                         <div className="col-12 col-md-4  ">
