@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import Home from './components/pages/home/Home';
 import NavBar from './components/pages/shared/header/NavBar';
-import Error from './components/pages/error/Error';
 import Login from './components/pages/login/Login';
 import Booking from './components/pages/booking/Booking';
 import Packages from './components/pages/packages/Packages';
@@ -15,6 +14,8 @@ import Orders from './components/pages/orders/Orders';
 import Register from './components/pages/register/Register';
 import Authprovider from './context/AuthProvider';
 import Privateroute from './privateRoute/PrivateRoute';
+import Footer from './components/pages/shared/footer/Footer';
+import NotFound from './components/pages/error/Notfound';
 
 function App() {
   return (
@@ -45,10 +46,11 @@ function App() {
               <Register></Register>
             </Route>
             <Route path='*'>
-              <Error></Error>
+              <NotFound></NotFound>
             </Route>
 
           </Switch>
+          <Footer></Footer>
         </Router>
       </Authprovider>
     </div>

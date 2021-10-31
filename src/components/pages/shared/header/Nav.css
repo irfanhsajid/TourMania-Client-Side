@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
 
 .nav-logo{
-    font-size: 40px;
+    font-size: 45px;
     font-family: 'Festive', cursive;
 }
 .link-title{
@@ -10,6 +10,6 @@
     color: rgb(0, 0, 0);
 }
 .link-title:hover{
-    color: rgb(252, 46, 46);
-    border-bottom: 1px solid rgb(221, 39, 39);
+    color: green;
+    border-bottom: 1.02px solid rgb(221, 39, 39);
 }

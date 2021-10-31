@@ -1,0 +1,13 @@
+.footer-container{
+    background:#0f0f13;
+    color: #e6dede;
+    padding: 10px;
+    margin-top: 50px;
+}
+.yellow-text{
+    color: yellow;
+    transition: .3s;
+}
+.yellow-text:hover{
+    color: white;
+}

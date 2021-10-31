@@ -1,0 +1,31 @@
+.faq-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accrodion{
+    width: 60%;
+}
+.faq-img{
+    width: 40%;
+}
+.faq-img img{
+    height: 400px;
+    width: 100%;
+   
+}
+
+@media screen and (max-width:780px) {
+    .faq-container{
+        flex-direction: column-reverse;
+    }
+    .accrodion{
+        width: 100%;
+    }
+    .faq-img{
+        width: 100%;
+    }
+    .faq-img img{
+        height: auto;
+    }
+}

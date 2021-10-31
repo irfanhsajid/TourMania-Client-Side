@@ -11,10 +11,11 @@ const Packages = () => {
             .then(data => setServices(data))
     }, []);
     return (
-        <div className="container my-5">
-            <div className="border-start border-5 border-dark my-4">
-                <h1 className=" ms-3 abt-title">Choose The <span className="title-bold-text">Destination <br />
-                    Just Right</span> For Your <br /> Vacation</h1>
+        <div className=" container my-5">
+
+            <div className="border-start border-4 border-dark my-4">
+                <h2 className=" ms-3 abt-title">Trending, <span className="title-bold-text">Best Selling <br />
+                    Tours And</span> Fun <br /> Destinations</h2>
 
             </div>
             <small className="text-muted">All the places are amazing.! We Provide the best quality of Tour Trip. Definitely, <br /> You will be pleased with our services. Just Drop a call for any package Booking. <br /> Feel Free to have a trip with TourMania group.<br />
@@ -37,10 +38,6 @@ const Packages = () => {
                                             <b className="text-dark">Total Cost : {service.cost}$</b>  &nbsp; &nbsp;
                                             <b> <i class="fas fa-map-marker-alt"></i> {service.location}</b>
                                         </div>
-
-                                        {/* <Link to='/booking' className="text-decoration-none">
-                                            <button className="border-0 d-flex mx-auto  btn-dark text-warning rounded-2 px-3 py-1 enroll-btn">Book Package</button>
-                                        </Link> */}
                                     </div>
                                 </div>
                             </Link>

@@ -8,13 +8,14 @@ const NavBar = () => {
     const { user, logOut } = useAuth()
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+            <Navbar sticky="top" collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand className="nav-logo fw-bold text-success" href="#home">Tour<span className="text-danger">Mania</span> </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link className="link-title" as={Link} to='/home'>Home</Nav.Link>
                         <Nav.Link className="link-title" as={Link} to='/packages'>Packages</Nav.Link>
+                        <Nav.Link className="link-title" as={Link} to='/blogs'>Blogs</Nav.Link>
 
                         {
                             user.email ? <Nav.Link className="link-title" as={Link} to='/orders'>My Orders</Nav.Link> :
