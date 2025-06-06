@@ -1,8 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './banner.css';
-import banner1 from './images/women.jpg';
-import banner2 from './images/slider1.jpg';
+import banner1 from './images/banner1.png';
+import banner2 from './images/banner2.png';
+import banner3 from './images/banner3.png';
 
 const Banner = () => {
     return (
@@ -26,6 +27,18 @@ const Banner = () => {
                     <img
                         className="d-block w-100 banner-img"
                         src={banner2}
+                        alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <p>Sylhet is a city in eastern Bangladesh, on the Surma River. It’s known for its Sufi shrines, like the ornate tomb and mosque of 14th-century saint Hazrat Shah Jalal.</p>
+                        <button className="btn-warning px-5 py-2 border-0 rounded-2">Visit More</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 banner-img"
+                        src={banner3}
                         alt="Third slide"
                     />
 

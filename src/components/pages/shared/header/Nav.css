@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+
+@import url('https://fonts.maateen.me/charukola-ultra-light/font.css');
 
 .nav-logo{
-    font-size: 45px;
-    font-family: 'Festive', cursive;
+    font-size: 38px;
+    font-family: 'CharukolaUltraLight', sans-serif;
 }
 .link-title{
     font-weight: bolder;

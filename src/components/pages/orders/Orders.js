@@ -5,14 +5,14 @@ const Orders = () => {
     const [orders, setOrders] = useState([]);
     const [isDeleted, setIsDeleted] = useState(null);
     useEffect(() => {
-        fetch('https://damp-cove-38892.herokuapp.com/orders')
+        fetch('https://tour-mania-server.vercel.app/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [isDeleted]);
     //delete method 
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`https://damp-cove-38892.herokuapp.com/deleteOrder/${id}`, {
+        fetch(`https://tour-mania-server.vercel.app/deleteOrder/${id}`, {
             method: "DELETE",
             headers: { "content-type": "application/json" }
         })
@@ -30,7 +30,7 @@ const Orders = () => {
     };
     return (
         <div className='container my-4'>
-            <h3 className="text-center mb-4 fw-bold"> Total Package Booked : {orders.length}</h3>
+            <h3 className="text-center mb-4 fw-bold"> Total Event Booked : {orders.length}</h3>
             <Table striped bordered hover responsive>
                 <thead>
                     <tr>
@@ -38,7 +38,7 @@ const Orders = () => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Date</th>
-                        <th>Location</th>
+                        <th>Payment By</th>
                         <th>Action</th>
                     </tr>
                 </thead>

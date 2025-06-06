@@ -1,3 +1,4 @@
+
 .title-bold-text{
     font-size: 45px;
     font-weight: bolder;
@@ -30,7 +31,8 @@
 
 .card-body{
     margin-top: 10px;
-    background-color: #ffe603c4;
+    /* text-align: center; */
+    /* background-color: #7a7a74c4; */
 }
 
   .enroll-btn:hover{

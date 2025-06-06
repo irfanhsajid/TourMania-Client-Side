@@ -6,7 +6,7 @@ import "./Booking.css";
 const Booking = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch(`https://damp-cove-38892.herokuapp.com/addOrder`, {
+        fetch(`https://tour-mania-server.vercel.app/addOrder`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data),
@@ -20,7 +20,7 @@ const Booking = () => {
 
     return (
         <div className="container">
-            <h2 className="mt-5 text-center fw-bold text-dark">Fill the Form to Confirm <br />Your package </h2>
+            <h2 className="mt-5 text-center fw-bold text-dark">Fill the Form to Confirm <br />Your Event </h2>
             <div className="form-container m-auto my-4">
                 <div className=" border border-1 shadow-lg rounded-3 submit-form p-4 d-flex justify-content-center align-items-center">
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -40,31 +40,23 @@ const Booking = () => {
                         <input
                             {...register("password")}
 
-                            required type='password'
-                            placeholder="Your Password"
+                            required type='number'
+                            placeholder="Your Phone Number"
                             className="p-2 m-2 w-100"
                         />
                         <br />
-                        <input
-                            {...register("cost")}
-                            type="number"
-                            placeholder="Total Budget"
-                            className="p-2 m-2 w-100"
-                        /> <br />
+
                         <input
                             {...register("date")}
-                            type="date"
+                            required type="date"
                             className="p-2 m-2 w-100"
                         />
                         <br />
                         <select {...register("place", { required: true })} className="p-2 m-2 w-100">
-                            <option value="Sylhet">Sylhet</option>
-                            <option value="Singapore">Singapore</option>
-                            <option value="Italy">Italy</option>
-                            <option value="America">America</option>
-                            <option value="Japan">Japan</option>
-                            <option selected value="Tokyo">Tokyo</option>
-                            <option value="Kashmir">Kashmir</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="Rocket">Rocket</option>
+                            <option value="Upay">Upay</option>
                         </select>
                         <br />
                         {errors.exampleRequisylhet && <span>This field is requisylhet</span>}
